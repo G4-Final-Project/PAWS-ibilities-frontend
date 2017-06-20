@@ -1,0 +1,59 @@
+{
+  "name": "paws-sibilities-frontend",
+  "version": "1.0.0",
+  "description": "JS 401 final project, Pet responsiblity app",
+  "main": "entry.js",
+  "scripts": {
+    "watch": "webpack-dev-server --inline --hot",
+    "build-watch": "webpack-dev-server --inline --hot",
+    "build": "webpack",
+    "test": "karma start --auto-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G4-Final-Project/PAWS-ibilities-frontend.git"
+  },
+  "author": "Maria, Carlo, James, Patrick",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/G4-Final-Project/PAWS-ibilities-frontend/issues"
+  },
+  "homepage": "https://github.com/G4-Final-Project/PAWS-ibilities-frontend#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.4",
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.0",
+    "babel-preset-es2015": "^6.24.1",
+    "camelcase": "^4.1.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "dotenv": "^4.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.28.0",
+    "karma-coverage": "^1.1.1",
+    "node-sass": "^4.5.3",
+    "pascalcase": "^0.1.1",
+    "resolve-url-loader": "^2.0.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.6.4",
+    "chai": "^4.0.2",
+    "karma": "^1.7.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.4.2",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
