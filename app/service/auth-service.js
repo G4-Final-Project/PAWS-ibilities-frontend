@@ -43,7 +43,7 @@ module.exports = [
     service.signup = function(user) {
       $log.debug('authService.signup()');
 
-      let url = `${__API_URL__}/api/signup`;
+      let url = `https://paw-sibilities-backend.herokuapp.com/api/user`;
       let config = {
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ module.exports = [
     service.login = function(user) {
       $log.debug('authService.login()');
 
-      let url = `${__API_URL__}/api/login`;
+      let url = `${__API_URL__}/api/user`;
       let base64 = $window.btoa(`${user.username}:${user.password}`);
       let config = {
         headers: {

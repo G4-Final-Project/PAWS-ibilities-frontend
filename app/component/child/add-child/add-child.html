@@ -1,0 +1,25 @@
+<section>
+  <form name="createChildForm"
+    ng-submit="createChildCtrl.createChild()">
+    <fieldset>
+      <label for="name">name</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="name"
+        ng-model="createChildCtrl.child.name"
+        required>
+    </fieldset>
+    <fieldset>
+      <label for="description">phone</label>
+      <input
+      type="number"
+      name="phone"
+      placeholder="5558675309"
+      ng-model="createChildCtrl.child.phone"
+      required>
+    </fieldset>
+
+    <button type="submit">add child</button>
+  </form>
+</section>
