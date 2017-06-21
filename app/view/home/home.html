@@ -7,6 +7,8 @@
   <ul>
     <child-item ng-repeat="item in homeCtrl.child" child="item"></child-item>
   </ul>
+  <ul>
+    <pet ng-repeat="item in homeCtrl.pet" pet="item"></pet>
+  </ul>
 
-  <thumbnail-container ng-if="homeCtrl.currentChild"  child="homeCtrl.currentChild"></thumbnail-container>
 </section>

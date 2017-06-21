@@ -8,10 +8,10 @@ module.exports = {
     $log.debug('child Item Controller');
 
     this.addPet = () => {
-      petService.createPet(this.child._id, this.pet)
-      .then(() => {
-        let res = this.pet;
-        this.pet.name = null;
+      return petService.createPet(this.child._id, this.pet)
+      .then((res) => {
+        console.log(res);
+        res = this.pet;
         return res;
       });
     };
@@ -31,7 +31,7 @@ module.exports = {
         err => $log.error(err)
       );
     };
-    
+
   }],
   bindings: {
     child: '<',
