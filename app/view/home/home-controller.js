@@ -31,6 +31,13 @@ module.exports = [
         .catch(err => $log.error(err));
       };
 
+      this.logout = () => {
+        console.log('CLICK');
+        return authService.logout()
+
+        .catch(err => $log.error(err));
+      };
+
       $rootScope.$on('locationChangeSuccess', this.fetchChild);
       return this.fetchChild();
     };

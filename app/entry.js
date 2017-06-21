@@ -8,7 +8,7 @@ const path = require('path');
 const angular = require('angular');
 const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
-const uiRouter = require('@uirouter/angularjs');
+require('@uirouter/angularjs');
 
 const cfgram = angular.module('paws', ['ui.router', 'ngMaterial']);
 
