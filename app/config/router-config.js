@@ -23,6 +23,13 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controller: 'LandingController',
       controllerAs: 'landingCtrl',
     },
+    {
+      name: 'game',
+      url: '/pet',
+      template: require('../view/game/game.html'),
+      controller: 'GameController',
+      controllerAs: 'GameCtrl',
+    },
   ];
 
   routes.forEach($stateProvider.state);
