@@ -5,7 +5,7 @@ module.exports = [
   '$log',
   '$http',
   '$window',
-  function($q, $log, $http, $window, authService) {
+  function($q, $log, $http, $window) {
     $log.debug('authService');
 
     let service = {};
@@ -36,6 +36,7 @@ module.exports = [
 
       $window.localStorage.removeItem('token');
       token = null;
+      $window.location = '/';
 
       return $q.resolve();
     };

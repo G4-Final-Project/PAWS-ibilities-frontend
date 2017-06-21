@@ -75,8 +75,8 @@ module.exports = [
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
-          }
+            Authorization: `Bearer ${token}`,
+          },
         };
         return $http.put(url, child, config);
       })
@@ -92,7 +92,7 @@ module.exports = [
       });
     };
 
-    service.deleteChild = (childId, child) => {
+    service.deleteChild = (childId) => {
       $log.debug('#childService.deleteChild');
 
       return authService.getToken()
@@ -102,8 +102,8 @@ module.exports = [
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
-          }
+            Authorization: `Bearer ${token}`,
+          },
         };
         return $http.delete(url, config);
       })
