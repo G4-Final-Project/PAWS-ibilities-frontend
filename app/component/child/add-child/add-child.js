@@ -10,8 +10,8 @@ module.exports = {
       $log.debug('Create Child Controller');
       this.child = {};
 
-      this.addChild = () => {
-        return childService.addChild(this.child)
+      this.createChild = () => {
+        return childService.createChild(this.child)
         .then(() => {
           let res = this.child;
           this.child.name = null;
