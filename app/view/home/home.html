@@ -1,14 +1,16 @@
 <section class="home-content">
-  <h2>HOME</h2>
-  <button ng-click='homeCtrl.logout()'>Sign Out</button>
+  <h2 class="md-display-3">HOME</h2>
+  <md-button class="md-raised md-primary" ng-click='homeCtrl.logout()'>Sign Out</md-button>
 
   <create-child></create-child>
 
-  <ul>
+
+  <md-list flex>
     <child-item ng-repeat="item in homeCtrl.child" child="item"></child-item>
-  </ul>
-  <ul>
+  </md-list>
+
+  <md-list flex>
     <pet ng-repeat="item in homeCtrl.pet" pet="item"></pet>
-  </ul>
+  </md-list>
 
 </section>

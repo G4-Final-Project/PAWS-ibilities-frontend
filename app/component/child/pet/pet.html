@@ -1,7 +1,10 @@
-
+<md-list-item>
 <div>
   <h1>Pets</h1>
-  <span>name: {{ petItemCtrl.pet.name }}</span>
-  <span>Born on: {{ petItemCtrl.pet.created }}</span>
-  <span>id: {{ petItemCtrl.pet.totalWalks }}</span>
+  <span>name: {{ petCtrl.pet.name }}</span>
+  <span>Born on: {{ petCtrl.pet.created }}</span>
+  <span>id: {{ petCtrl.pet._id }}</span>
+  <span>total walks: {{ petCtrl.pet.totalWalks }}</span>
+  <span>current hunger: {{ petCtrl.pet.currentHunger }}</span>
 </div>
+</md-list-item>

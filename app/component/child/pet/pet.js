@@ -5,7 +5,7 @@ module.exports = {
   controllerAs: 'petCtrl',
   bindings: {
     pet: '<',
-    child: '<',
+    // child: '<',
   },
   controller:[
     '$log',
@@ -13,7 +13,7 @@ module.exports = {
     function($log){
       this.$onInit = () =>{
         $log.debug('petCtrl');
-
+        console.log('this is this', this);
       };
     },
   ],
