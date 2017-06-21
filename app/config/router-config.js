@@ -24,11 +24,11 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controllerAs: 'landingCtrl',
     },
     {
-     name: 'game',
-     url: '/pet',
-     template: require('../view/game/game.html'),
-     controller: 'GameController',
-     controllerAs: 'GameCtrl',
+      name: 'game',
+      url: '/pet',
+      template: require('../view/game/game.html'),
+      controller: 'GameController',
+      controllerAs: 'GameCtrl',
     },
   ];
 
