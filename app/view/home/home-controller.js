@@ -9,7 +9,8 @@ module.exports = [
   '$location',
   'authService',
   'childService',
-  function($log, $rootScope, $window, $location, authService, childService) {
+  'petService',
+  function($log, $rootScope, $window, $location, authService, childService, petService) {
     this.$onInit = () => {
       $log.debug('HomeController()');
       if(!$window.localStorage.token) {
@@ -28,6 +29,14 @@ module.exports = [
           this.currentChild = this.child[0];
         })
         .catch(err => $log.error(err));
+      };
+
+      this.fetchPets = () => {
+        return petService.fetchAllPets()
+        .then(pet => {
+          this.pet = pet;
+          this.currentPet = this.pet[0];
+        });
       };
 
       this.logout = () => {
