@@ -12,8 +12,8 @@ function LoginController($log, $location, authService){
   authService.getToken().then(()=> $location.url('/home'));
   this.login = function(){
     $log.log('loginCtrl.login()');
-    $log.log('user', this.user)
+    $log.log('user', this.user);
 
-    authService.login(this.user).then(()=> $location.url('/home'))
+    authService.login(this.user).then(()=> $location.url('/home'));
   };
 }

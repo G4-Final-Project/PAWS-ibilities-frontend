@@ -5,4 +5,15 @@
     <span>id: {{ childItemCtrl.child._id }}</span>
   </div>
   <button ng-click="childItemCtrl.deleteChild()">Delete</button>
+
+  <div>
+    <form ng-submit="childItemCtrl.addPet()">
+      <input
+      type="text"
+      placeholder="Pet name"
+      ng-model="childItemCtrl.pet.name">
+      <button type="submit">Adopt Pet</button>
+    </form>
+  </div>
+  <button ng-click="childItemCtrl.deletePet()">Delete</button>
 </li>

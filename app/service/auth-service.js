@@ -45,7 +45,6 @@ module.exports = [
       $log.debug('authService.signup()');
 
       let url = `https://paw-sibilities-backend.herokuapp.com/api/user`;
-      console.log('heres the url', url);
       let config = {
         headers: {
           'Content-Type': 'application/json',
