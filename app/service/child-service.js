@@ -28,7 +28,6 @@ module.exports = [
       .then(res => {
         $log.log('child created');
         let child = res.data;
-        console.log('this is the child',child);
         service.children.unshift(child);
         console.log('this is the child array', service.children);
         return child;
@@ -55,7 +54,6 @@ module.exports = [
         return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child`, config);
       })
       .then(res => {
-        $log.log('child was got');
         service.children = res.data;
         return res.data;
       })

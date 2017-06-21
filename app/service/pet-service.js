@@ -20,9 +20,10 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.post(`https://paw-sibilities-backend.herokuapp.com/api/child/${child.id}/pet`, pet, config);
+        return $http.post(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, pet, config);
       })
       .then(res => {
+        console.log('pet-service:',res.data);
         let pet = res.data;
         return pet;
       })
@@ -91,5 +92,8 @@ module.exports = [
         return $q.reject(err);
       });
     };
+
+    service.deletePet = (child)
+    return service;
   },
 ];
