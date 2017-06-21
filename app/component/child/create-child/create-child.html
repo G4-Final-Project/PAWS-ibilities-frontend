@@ -2,24 +2,26 @@
   <form name="createChildForm"
     ng-submit="createChildCtrl.createChild()">
     <fieldset>
-      <label for="name">name</label>
+      <md-input-container>
+      <label for="name">Name</label>
       <input
         type="text"
         name="name"
-        placeholder="name"
         ng-model="createChildCtrl.child.name"
         required>
+      </md-input-container>
     </fieldset>
     <fieldset>
-      <label for="description">phone</label>
+      <md-input-container>
+      <label for="description">Phone#</label>
       <input
       type="number"
       name="phone"
-      placeholder="5558675309"
       ng-model="createChildCtrl.child.phone"
       required>
+    </md-input-container>
     </fieldset>
 
-    <button type="submit">add child</button>
+    <md-button class="md-raised md-primary" type="submit">Add Child</md-button>
   </form>
 </section>

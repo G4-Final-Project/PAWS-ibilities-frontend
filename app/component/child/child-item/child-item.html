@@ -1,20 +1,25 @@
-<li id ="child-list">
+<md-list-item id ="child-list">
   <div>
     <span>name: {{ childItemCtrl.child.name }}</span>
     <span>phone: {{ childItemCtrl.child.phone }}</span>
     <span>id: {{ childItemCtrl.child._id }}</span>
   </div>
-  <button ng-click="childItemCtrl.deleteChild()">Delete</button>
+  <md-button class="md-raised md-warn" ng-click="childItemCtrl.deleteChild()">Delete</md-button>
 
+</md-list-item>
+
+<md-list-item>
   <div>
     <form ng-submit="childItemCtrl.addPet()">
+      <md-input-container>
+      <label for="pet">Pet Name</label>
       <input
       type="text"
-      placeholder="Pet name"
       ng-model="childItemCtrl.pet.name">
-      <button type="submit">Adopt Pet</button>
+    </md-input-container>
+      <md-button class="md-raised" type="submit">Adopt Pet</md-button>
     </form>
   </div>
 
   <!-- <button ng-click="childItemCtrl.deletePet()">Delete</button> -->
-</li>
+</md-list-item>

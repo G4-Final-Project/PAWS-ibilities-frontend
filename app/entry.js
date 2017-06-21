@@ -1,7 +1,7 @@
 'use strict';
 
 // require('./scss/reset.scss');
-// require('./scss/main.scss');
+require('./scss/main.scss');
 
 
 const path = require('path');
