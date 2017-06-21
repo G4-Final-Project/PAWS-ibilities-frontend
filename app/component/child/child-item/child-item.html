@@ -1,11 +1,8 @@
 <li id ="child-list">
-  <div ng-if="!childItemCtrl.showEditGallery">
-    <div>
-      <span>name: {{ childItemCtrl.child.name }}</span>
-      <span>description: {{ childItemCtrl.child.desc }}</span>
-      <span>id: {{ childItemCtrl.child._id }}</span>
-    </div>
+  <div>
+    <span>name: {{ childItemCtrl.child.name }}</span>
+    <span>phone: {{ childItemCtrl.child.phone }}</span>
+    <span>id: {{ childItemCtrl.child._id }}</span>
   </div>
-
-  <button ng-click="galleryItemCtrl.deleteGallery()">Delete</button>
+  <button ng-click="childItemCtrl.deleteChild()">Delete</button>
 </li>

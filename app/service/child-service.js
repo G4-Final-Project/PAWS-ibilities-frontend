@@ -10,7 +10,7 @@ module.exports = [
     $log.debug('Child Service');
 
     let service = {};
-    service.child = [];
+    service.children = [];
 
     service.createChild = (child) => {
       $log.debug('service.createChild');
@@ -23,12 +23,14 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.post(`${__API_URL__}/api/child`, child, config);
+        return $http.post(`https://paw-sibilities-backend.herokuapp.com/api/child`, child, config);
       })
       .then(res => {
         $log.log('child created');
         let child = res.data;
-        service.child.unshift(child);
+        console.log('this is the child',child);
+        service.children.unshift(child);
+        console.log('this is the child array', service.children);
         return child;
       })
       .catch(err => {
@@ -50,11 +52,11 @@ module.exports = [
           },
         };
 
-        return $http.get(`${__API_URL__}/api/child`, config);
+        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child`, config);
       })
       .then(res => {
         $log.log('child was got');
-        service.child = res.data;
+        service.children = res.data;
         return res.data;
       })
       .catch(err => {
@@ -68,7 +70,7 @@ module.exports = [
 
       return authService.getToken()
       .then(token => {
-        let url = `${__API_URL__}/api/child/${childId}`;
+        let url = `https://paw-sibilities-backend.herokuapp.com/api/child/${childId}`;
         let config = {
           headers: {
             Accept: 'application/json',
@@ -79,8 +81,8 @@ module.exports = [
         return $http.put(url, child, config);
       })
       .then(res => {
-        service.child.forEach((ele, idx) => {
-          if(ele._id === res.data._id) service.child[idx] = res.data;
+        service.children.forEach((ele, idx) => {
+          if(ele._id === res.data._id) service.children[idx] = res.data;
         });
         return res.data;
       })
@@ -95,7 +97,7 @@ module.exports = [
 
       return authService.getToken()
       .then(token => {
-        let url = `${__API_URL__}/api/child/${childId}`;
+        let url = `https://paw-sibilities-backend.herokuapp.com/api/child/${childId}`;
         let config = {
           headers: {
             Accept: 'application/json',
@@ -106,8 +108,8 @@ module.exports = [
         return $http.delete(url, config);
       })
       .then(res => {
-        service.child.filter((ele, i) => {
-          if(ele._id === childId) service.child.splice(i, 1);
+        service.children.filter((ele, i) => {
+          if(ele._id === childId) service.children.splice(i, 1);
         });
         return res;
       })

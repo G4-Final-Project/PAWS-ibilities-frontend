@@ -1,10 +1,10 @@
 'use strict';
 
-// require('./_add-child.scss');
+// require('./_create-child.scss');
 
 module.exports = {
-  template: require('./add-child.html'),
-  controllerAs: 'addChildCtrl',
+  template: require('./create-child.html'),
+  controllerAs: 'createChildCtrl',
   controller: ['$log', 'childService', function($log, childService) {
     this.$onInit = () => {
       $log.debug('Create Child Controller');
