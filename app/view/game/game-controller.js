@@ -17,7 +17,16 @@ module.exports = [
       this.walkPet = (child) => {
         child = childId;
         console.log('controller child id', child);
-        return gameService.walkPet(child);
+        return gameService.walkPet(child)
+        .then(petState => {
+          console.log('this is the petSate', petState);
+          petState.totalWalks += 1
+          return petState
+        })
+        .then(petState => {
+          petService.updatePet(child, petState)
+          console.log('pet has been updated');
+        })
       };
 
       this.fetchChild = () => {
