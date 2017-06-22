@@ -1,17 +1,19 @@
-<md-list-item id ="child-list">
+<md-card>
   <div layout="column">
 
   <div>
-    <p>Name: {{ childItemCtrl.child.name }}</p>
-    <p>Phone: {{ childItemCtrl.child.phone }}</p>
-    <p>ID: {{ childItemCtrl.child._id }}</p>
+    <md-card-title class="md-headline">Name: {{ childItemCtrl.child.name }}</md-card-title>
+    <md-card-content>
+      <p>Phone: {{ childItemCtrl.child.phone }}</p>
+      <p>ID: {{ childItemCtrl.child._id }}</p>
+    </md-card-content>
   </div>
   <div>
     <md-button class="md-raised md-warn" ng-click="childItemCtrl.deleteChild()">Delete</md-button>
   </div>
 </div>
 
-</md-list-item>
+</md-card>
 
 <md-list-item>
   <div layout="column">
