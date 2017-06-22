@@ -7,7 +7,8 @@
     "watch": "webpack-dev-server --inline --hot",
     "build-watch": "webpack-dev-server --inline --hot",
     "build": "webpack",
-    "test": "karma start --auto-watch"
+    "test": "karma start --auto-watch",
+    "start": "node entry.js"
   },
   "repository": {
     "type": "git",

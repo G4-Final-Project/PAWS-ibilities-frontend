@@ -21,15 +21,31 @@ module.exports = [
         return pet;
       });
     };
-    // service.feedPet = () => {
 
-    // };
-    // service.groomPet = () => {
+    service.feedPet = (child) => {
+      return petService.getPetChild(child)
+      .then(pet => {
+        service.currentPet = pet;
+        return pet;
+      });
+    };
 
-    // };
-    // service.playPet = () => {
+    service.playPet = (child) => {
+      return petService.getPetChild(child)
+      .then(pet => {
+        service.currentPet = pet;
+        return pet;
+      });
+    };
 
-    // };
+    service.hygienePet = (child) => {
+      return petService.getPetChild(child)
+      .then(pet => {
+        service.currentPet = pet;
+        return pet;
+      });
+    };
+
     return service;
   },
 ];
