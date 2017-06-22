@@ -1,15 +1,22 @@
 <md-list-item id ="child-list">
+  <div layout="column">
+
   <div>
-    <span>name: {{ childItemCtrl.child.name }}</span>
-    <span>phone: {{ childItemCtrl.child.phone }}</span>
-    <span>id: {{ childItemCtrl.child._id }}</span>
+    <p>Name: {{ childItemCtrl.child.name }}</p>
+    <p>Phone: {{ childItemCtrl.child.phone }}</p>
+    <p>ID: {{ childItemCtrl.child._id }}</p>
   </div>
-  <md-button class="md-raised md-warn" ng-click="childItemCtrl.deleteChild()">Delete</md-button>
+  <div>
+    <md-button class="md-raised md-warn" ng-click="childItemCtrl.deleteChild()">Delete</md-button>
+  </div>
+</div>
 
 </md-list-item>
 
 <md-list-item>
-  <div>
+  <div layout="column">
+    <div>
+
     <form ng-submit="childItemCtrl.addPet()">
       <md-input-container>
       <label for="pet">Pet Name</label>
@@ -17,8 +24,11 @@
       type="text"
       ng-model="childItemCtrl.pet.name">
     </md-input-container>
+    <div>
       <md-button class="md-raised" type="submit">Adopt Pet</md-button>
+    </div>
     </form>
+  </div>
   </div>
 
   <!-- <button ng-click="childItemCtrl.deletePet()">Delete</button> -->

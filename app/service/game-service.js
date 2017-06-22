@@ -11,9 +11,6 @@ module.exports = [
     let service = {};
 
 
-
-    let pet = petService.getPetChild(pet);
-
     service.walkPet = (pet) => {
       console.log('this is the pet:', pet);
     };
