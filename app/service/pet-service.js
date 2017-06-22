@@ -118,7 +118,7 @@ module.exports = [
           'Content-Type': 'application/json',
         },
       };
-      return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child._id}/pet`, config)
+      return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, config)
       .then(res => {
         let pet = res.data;
         console.log('res.data', res.data);
@@ -130,7 +130,7 @@ module.exports = [
       });
     };
 
-    service.updatePet = (child, pet) => {
+    service.updatePet = (childId, pet) => {
       $log.debug('create pet');
       return authService.getToken()
       .then(token => {
@@ -141,7 +141,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.put(`https://paw-sibilities-backend.herokuapp.com/api/child/${child.id}/pet`, pet, config);
+        return $http.put(`https://paw-sibilities-backend.herokuapp.com/api/child/${childId}/pet`, pet, config);
       })
       .then(res => {
         let pet = res.data;
