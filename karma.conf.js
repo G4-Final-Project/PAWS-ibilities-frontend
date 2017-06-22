@@ -15,6 +15,14 @@ module.exports = function(config) {
       'app/entry.js',
       'test/**/*-test.js',
     ],
+    plugins: [
+    'karma-mocha',
+    'karma-webpack',
+    'karma-coverage',
+    'mocha',
+    'karma-mocha-reporter',
+    'karma-chrome-launcher',
+    ],
     exclude: [
     ],
     preprocessors: {
@@ -29,5 +37,7 @@ module.exports = function(config) {
     browsers: ['Chrome'],
     singleRun: true,
     concurrency: Infinity,
+    hostname: process.env.IP,
+    port: process.env.PORT,
   });
 };
