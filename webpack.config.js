@@ -13,6 +13,8 @@ let plugins = [
   new ExtractTextPlugin({ filename: 'bundle.css' }),
   new HTMLPlugin({template: `${__dirname}/app/index.html`}),
   new webpack.DefinePlugin({
+    // __ACC_SID__: JSON.stringify(process.env.ACC_SID),
+    // __AUTH_TOKEN__: JSON.stringify(process.env.AUTH_TOKEN),
     __API_URL__: JSON.stringify(process.env.API_URL),
     __DEBUG__: JSON.stringify(!production),
   }),

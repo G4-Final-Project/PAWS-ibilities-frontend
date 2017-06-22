@@ -12,11 +12,10 @@ module.exports = [
 
 
 
-    let pet = petService.getPetChild(child, pet)
+    let pet = petService.getPetChild(pet);
 
-    service.walkPet = (child, pet) => {
-        console.log('this is the child:', child);
-        console.log('this is the pet:', pet);
+    service.walkPet = (pet) => {
+      console.log('this is the pet:', pet);
     };
     // service.feedPet = () => {
 
