@@ -5,7 +5,6 @@ module.exports = [
   '$log',
   '$http',
   'authService',
-
   function($q, $log, $http, authService) {
     $log.debug('Child Service');
 

@@ -12,6 +12,7 @@ module.exports = [
 
     service.createPet = (child, pet) => {
       $log.debug('create pet');
+      // twilioService.linkMessage(child)
       return authService.getToken()
       .then(token => {
         let config = {
@@ -26,8 +27,11 @@ module.exports = [
       .then(res => {
         console.log('pet-service:',res.data);
         let pet = res.data;
+        console.log(pet);
         service.pets.unshift(pet);
         console.log('pets', service.pets);
+
+
         return pet;
       })
       .catch(err => {

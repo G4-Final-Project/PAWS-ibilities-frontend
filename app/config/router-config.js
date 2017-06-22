@@ -8,6 +8,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('/signup', '/join#signup');
   $urlRouterProvider.when('/login', '/join#login');
 
+
   let routes = [
     {
       name: 'home',
@@ -25,7 +26,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
     },
     {
       name: 'game',
-      url: '/pet',
+      url: `/pet/:id`,
       template: require('../view/game/game.html'),
       controller: 'GameController',
       controllerAs: 'GameCtrl',
