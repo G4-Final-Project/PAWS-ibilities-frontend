@@ -3,14 +3,20 @@
   <md-button class="md-raised md-primary" ng-click='homeCtrl.logout()'>Sign Out</md-button>
 
   <create-child></create-child>
+  <h1 class="md-display-4">Children</h1>
+  <div layout="row">
 
+    <div>
+      <md-list flex>
+        <child-item ng-repeat="item in homeCtrl.child" child="item"></child-item>
+      </md-list>
+    </div>
 
-  <md-list flex>
-    <child-item ng-repeat="item in homeCtrl.child" child="item"></child-item>
-  </md-list>
-
-  <md-list flex>
-    <pet ng-repeat="item in homeCtrl.pet" pet="item"></pet>
-  </md-list>
+    <div>
+      <md-list flex>
+        <pet ng-repeat="item in homeCtrl.pet" pet="item"></pet>
+      </md-list>
+    </div>
+  </div>
 
 </section>

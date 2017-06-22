@@ -64,6 +64,28 @@ module.exports = [
       });
     };
 
+    service.fetchPet = (child) => {
+      return authService.getToken()
+      .then(token => {
+        let config = {
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        };
+        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, config);
+      })
+      .then(res => {
+        service.pets = res.data;
+        return res.data;
+      })
+      .catch(err => {
+        $log.error(err.message);
+        return $q.reject(err);
+      });
+    };
+
     service.fetchAllPets = () => {
       return authService.getToken()
       .then(token => {
@@ -88,11 +110,18 @@ module.exports = [
     };
 
 
-    service.getPetChild = (child, pet) => {
+    service.getPetChild = (child) => {
       $log.debug('create pet');
-      return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child.id}/pet`, pet)
+      let config = {
+        headers: {
+          Accept: 'application./json',
+          'Content-Type': 'application/json',
+        },
+      };
+      return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child._id}/pet`, config)
       .then(res => {
         let pet = res.data;
+        console.log('res.data', res.data);
         return pet;
       })
       .catch(err => {

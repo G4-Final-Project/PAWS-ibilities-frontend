@@ -29,7 +29,7 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       url: `/pet/:id`,
       template: require('../view/game/game.html'),
       controller: 'GameController',
-      controllerAs: 'GameCtrl',
+      controllerAs: 'gameCtrl',
     },
   ];
 
