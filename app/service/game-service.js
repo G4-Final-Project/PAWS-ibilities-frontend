@@ -9,10 +9,15 @@ module.exports = [
   function($q, $log, $http, petService) {
     $log.debug('pet service');
     let service = {};
+    service.currentPet;
 
-
-    service.walkPet = (pet) => {
-      console.log('this is the pet:', pet);
+    service.walkPet = (child) => {
+      console.log('this is the child', child);
+      return petService.getPetChild(child)
+      .then(child => {
+        service.currentPet = child.pet;
+        console.log('this is the current pet:', service.currentPet);
+      });
     };
     // service.feedPet = () => {
 
@@ -23,5 +28,6 @@ module.exports = [
     // service.playPet = () => {
 
     // };
+    return service;
   },
 ];
