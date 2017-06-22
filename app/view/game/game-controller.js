@@ -14,14 +14,16 @@ module.exports = [
       console.log($location.$$url);
       let childId = $location.$$url.split('/pet/')[1];
 
-      this.walkPet = () => {
-        return gameService.walkPet(this.pet);
+      this.walkPet = (child) => {
+        child = childId;
+        console.log('controller child id', child);
+        return gameService.walkPet(child);
       };
 
       this.fetchChild = () => {
         return childService.fetchChild(childId)
         .then(child => {
-          console.log(child);
+          console.log('this is the child',child);
           this.child = child;
           this.currentChild = this.child[0];
         })
