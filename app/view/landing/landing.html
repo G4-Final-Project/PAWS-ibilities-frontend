@@ -1,3 +1,4 @@
+<h2 class="sub-header">Interactive Pet Simulator</h2>
 <section class="landing">
   <div class="join-container"
     ng-if="landingCtrl.showSignup">
@@ -14,9 +15,10 @@
   <div class="join-container"
     ng-if="!landingCtrl.showSignup">
     <div class="join-inner">
-      <login></login>
+      <login class="login"></login>
       <p>want to signup?</p>
       <a href="/#!/signup"
+        class="signup-link"
         ng-click="landingCtrl.showSignup=true">
         sign up
       </a>

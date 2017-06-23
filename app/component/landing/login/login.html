@@ -1,17 +1,22 @@
 <section class="login-form">
+  <md-card class="landing">
   <form
+    class="log-input"
     name="loginForm"
     ng-submit="loginCtrl.login()"
     novalidate>
     <div
+      class="user-input"
       ng-class="{
         'error': loginForm.username.$invalid,
         'success': loginForm.username.$valid,
       }">
+      <md-input-container>
       <input type="text"
         name="username"
         placeholder="username"
         ng-model="loginCtrl.user.username" required>
+      </md-input-container>
     </div>
 
     <div
@@ -19,13 +24,17 @@
         'error': loginForm.password.$invalid && loginForm.$submitted,
         'success': loginForm.password.$valid,
       }">
+      <md-input-container>
       <input type="password" name="password"
         ng-disabled="loginForm.username.$invalid"
         placeholder="password"
         ng-minlength="3"
         ng-model="loginCtrl.user.password" required>
+      </md-input-container>
     </div>
 
-    <button class="btn-std">Sign In</button>
+    <md-button id="signin" class="md-raised md-primary">Sign In</md-button>
+
   </form>
+</md-card>
 </section>
