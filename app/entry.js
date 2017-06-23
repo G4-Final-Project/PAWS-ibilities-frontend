@@ -2,7 +2,7 @@
 
 // require('./scss/reset.scss');
 require('./scss/main.scss');
-require('angular-material/angular-material.scss');
+
 
 const path = require('path');
 const angular = require('angular');
@@ -10,7 +10,6 @@ const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 require('@uirouter/angularjs');
 require('angular-material');
-require('angular-aria');
 
 const paws = angular.module('paws', ['ui.router', 'ngMaterial']);
 
