@@ -16,8 +16,57 @@ module.exports = [
 
       this.walkPet = (child) => {
         child = childId;
-        console.log('controller child id', child);
-        return gameService.walkPet(child);
+        return gameService.walkPet(child)
+        .then(petState => {
+          petState.totalWalks += 1;
+          return petState;
+        })
+        .then(petState => {
+          petService.updatePet(child, petState);
+          console.log('pet has been updated');
+        });
+      };
+
+      this.feedPet = (child) => {
+        child = childId;
+        return gameService.feedPet(child)
+        .then(petState => {
+          console.log('this is the petSate', petState);
+          petState.currentHunger += 1;
+          return petState;
+        })
+        .then(petState => {
+          petService.updatePet(child, petState);
+          console.log('pet has been updated');
+        });
+      };
+
+      this.hygienePet = (child) => {
+        child = childId;
+        return gameService.hygienePet(child)
+        .then(petState => {
+          console.log('this is the petSate', petState);
+          petState.hygiene += 1;
+          return petState;
+        })
+        .then(petState => {
+          petService.updatePet(child, petState);
+          console.log('pet has been updated');
+        });
+      };
+
+      this.playPet = (child) => {
+        child = childId;
+        return gameService.playPet(child)
+        .then(petState => {
+          console.log('this is the petSate', petState);
+          petState.happiness += 1;
+          return petState;
+        })
+        .then(petState => {
+          petService.updatePet(child, petState);
+          console.log('pet has been updated');
+        });
       };
 
       this.fetchChild = () => {
