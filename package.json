@@ -8,7 +8,8 @@
     "build-watch": "webpack-dev-server --inline --hot",
     "build": "webpack",
     "test": "karma start --auto-watch",
-    "start": "node entry.js"
+    "start": "node entry.js",
+    "heroku-postbuild": "webpack -p --progress"
   },
   "repository": {
     "type": "git",
@@ -62,5 +63,6 @@
     "karma-webpack": "^2.0.3",
     "mocha": "^3.4.2",
     "webpack-dev-server": "^2.5.0"
-  }
+  },
+  "engines": { "node": "6.10.0" }
 }
