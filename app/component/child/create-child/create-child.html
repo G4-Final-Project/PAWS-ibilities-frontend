@@ -1,7 +1,9 @@
-<section>
+<section class="child-form">
+  <md-card class="card">
   <form name="createChildForm"
+    class="child-input"
     ng-submit="createChildCtrl.createChild()">
-    <fieldset>
+
       <md-input-container>
       <label for="name">Name</label>
       <input
@@ -10,8 +12,8 @@
         ng-model="createChildCtrl.child.name"
         required>
       </md-input-container>
-    </fieldset>
-    <fieldset>
+
+
       <md-input-container>
       <label for="description">Phone#</label>
       <input
@@ -20,8 +22,9 @@
       ng-model="createChildCtrl.child.phone"
       required>
     </md-input-container>
-    </fieldset>
-
-    <md-button class="md-raised md-primary" type="submit">Add Child</md-button>
+    <div>
+      <md-button class="md-raised md-primary" type="submit">Add Child</md-button>
+    </div>
   </form>
+</md-card>
 </section>

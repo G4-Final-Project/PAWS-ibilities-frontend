@@ -1,22 +1,17 @@
+<md-button id="signout-button" class="md-raised md-primary" ng-click='homeCtrl.logout()'>Sign Out</md-button>
+<h2 class="md-display-3">HOME</h2>
 <section class="home-content">
-  <h2 class="md-display-3">HOME</h2>
-  <md-button class="md-raised md-primary" ng-click='homeCtrl.logout()'>Sign Out</md-button>
+  <h2 class="md-display-1">Add a Child</h2>
 
   <create-child></create-child>
-  <h1 class="md-display-4">Children</h1>
-  <div layout="row">
+  <h2 class="md-display-3">Children</h2>
 
-    <div>
-      <md-list flex>
+    <div class="child-block">
         <child-item ng-repeat="item in homeCtrl.child" child="item"></child-item>
-      </md-list>
     </div>
 
-    <div>
-      <md-list flex>
+    <div class="child block">
         <pet ng-repeat="item in homeCtrl.pet" pet="item"></pet>
-      </md-list>
     </div>
-  </div>
 
 </section>

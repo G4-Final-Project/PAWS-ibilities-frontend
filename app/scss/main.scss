@@ -8,10 +8,16 @@ body {
 }
 
 .md-display-3 {
-  font-family: Roboto;
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
 }
 
-.landing {
+.md-display {
+  font-family: 'Fredoka One', cursive;
+  text-align: center;
+}
+
+.card {
   margin: 0 auto;
   width: 80%;
 }
@@ -27,7 +33,11 @@ body {
 }
 
 .login-form {
-  margin-top: 20px;
+  margin-top: 1.25em;
+}
+
+.pet-form {
+  margin: 0 auto;
 }
 
 .join-container {
@@ -38,14 +48,31 @@ body {
   text-align: center;
 }
 
+.child-block {
+  margin: 0 auto;
+}
+
 .sub-header {
   font-size: 1.7em;
   text-align: center;
   font-family: 'Fredoka One', cursive;
 }
 
+.home-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.child-input {
+  font-size: 1.5em;
+}
+
 #title {
   font-family: 'Fredoka One', cursive;
+}
+
+#signout-button {
+
 }
 
 fieldset {
