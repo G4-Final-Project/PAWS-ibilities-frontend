@@ -31,6 +31,11 @@ function routerConfig($stateProvider, $urlRouterProvider) {
       controller: 'GameController',
       controllerAs: 'gameCtrl',
     },
+    {
+      name: 'about',
+      url: '/about',
+      template: require('../view/about/about.html'),
+    },
   ];
 
   routes.forEach($stateProvider.state);
