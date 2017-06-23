@@ -1,10 +1,28 @@
-body {
+html,body {
   font-family: Roboto;
+  background-color: #00BCD4;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  font-size: 1.25em;
 }
 
 .md-display-4 {
   font-family: Roboto;
   margin: 0 auto;
+}
+
+.pet-pic {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.care {
+  text-align: center;
 }
 
 .md-display-3 {

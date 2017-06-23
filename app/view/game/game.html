@@ -2,16 +2,16 @@
 
 <h1>{{ gameCtrl.pet.name }}</h1>
 
-<div>
-    <img src="../../assets/placekat.jpg">
-
+<div class="pet-pic">
+    <img src="../../assets/kamja.jpg">
 </div>
 
-<md-button class="md-raised md-primary" ng-click="gameCtrl.walkPet()">Walk</md-button>
-<md-button class="md-raised md-primary" ng-click="gameCtrl.feedPet()">Feed</md-button>
-<md-button class="md-raised md-primary" ng-click="gameCtrl.hygienePet()">Bath</md-button>
-<md-button class="md-raised md-primary" ng-click="gameCtrl.playPet()">Play</md-button>
-
-
-
+<md-card class="pet-card">
+  <div class="care">
+    <md-button class="md-raised md-primary" ng-click="gameCtrl.walkPet()">Walk</md-button>
+    <md-button class="md-raised md-primary" ng-click="gameCtrl.feedPet()">Feed</md-button>
+    <md-button class="md-raised md-primary" ng-click="gameCtrl.hygienePet()">Bath</md-button>
+    <md-button class="md-raised md-primary" ng-click="gameCtrl.playPet()">Play</md-button>
+  </div>
+</md-card>
 </section>
