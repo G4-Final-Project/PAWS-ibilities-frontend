@@ -13,7 +13,7 @@ module.exports = {
     function($log){
       this.$onInit = () =>{
         $log.debug('petCtrl');
-        console.log('this is this', this);
+        console.log('this is this pet', this);
       };
     },
   ],

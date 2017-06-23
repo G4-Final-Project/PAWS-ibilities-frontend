@@ -12,7 +12,7 @@ module.exports = [
     service.currentPet;
 
     service.walkPet = (child) => {
-      console.log('this is the child', child);
+      // console.log('this is the child', child);
       return petService.getPetChild(child)
       .then(pet => {
         console.log('child in game service', pet);

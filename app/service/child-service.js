@@ -28,7 +28,7 @@ module.exports = [
         $log.log('child created');
         let child = res.data;
         service.children.unshift(child);
-        console.log('this is the child array', service.children);
+        // console.log('this is the child array', service.children);
         return child;
       })
       .catch(err => {

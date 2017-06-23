@@ -6,9 +6,10 @@ module.exports = {
   controllerAs: 'childItemCtrl',
   controller: ['$log', 'childService', 'petService', function($log, childService, petService) {
     $log.debug('child Item Controller');
-console.log('hello');
+    // console.log('hello');
+
     this.addPet = () => {
-      console.log('child id in addPet', this.child._id);
+      // console.log('child id in addPet', this.child._id);
       return petService.createPet(this.child._id, this.pet)
       .then((res) => {
         console.log(res);

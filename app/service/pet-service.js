@@ -27,11 +27,9 @@ module.exports = [
       .then(res => {
         console.log('pet-service:',res.data);
         let pet = res.data;
-        console.log(pet);
+        // console.log(pet);
         service.pets.unshift(pet);
-        console.log('pets', service.pets);
-
-
+        // console.log('pets', service.pets);
         return pet;
       })
       .catch(err => {
@@ -96,8 +94,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-
-        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/pet`, config);
+        return $http.get('https://paw-sibilities-backend.herokuapp.com/api/pet', config);
       })
       .then(res => {
         service.pets = res.data;
@@ -121,7 +118,7 @@ module.exports = [
       return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, config)
       .then(res => {
         let pet = res.data;
-        console.log('res.data', res.data);
+        // console.log('res.data', res.data);
         return pet;
       })
       .catch(err => {
