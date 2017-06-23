@@ -1,32 +1,45 @@
 <section class="signup">
+  <md-card class="landing">
+
   <form class="signup-form"
     ng-submit="signupCtrl.signup(signupCtrl.user)"
     novalidate>
 
+    <md-input-container>
     <input class="input-std"
       type="text"
       placeholder="name"
       ng-minlength="4"
       ng-model="signupCtrl.user.username"
       required>
+    </md-input-container>
 
+    <md-input-container>
     <input class="input-std"
       type="number"
       placeholder="phone"
       ng-model="signupCtrl.user.phone">
+    </md-input-container>
 
+    <md-input-container>
     <input class="input-std"
       type="text"
       placeholder="email"
       ng-model="signupCtrl.user.email">
+    </md-input-container>
 
+    <md-input-container>
     <input class="input-std"
       type="text"
       placeholder="password"
       ng-minlength="3"
       ng-model="signupCtrl.user.password"
       required>
-
-    <input type="submit" value="sign up">
+    </md-input-container>
+    <div class="signup-section">
+      <md-button id="signin" class="md-raised md-primary" type="submit" value="sign up">Signup</md-button>
+    </div>
   </form>
+</md-card>
+
 </section>

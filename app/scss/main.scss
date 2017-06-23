@@ -11,6 +11,43 @@ body {
   font-family: Roboto;
 }
 
+.landing {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.login {
+  margin: 0 auto;
+}
+
+.log-input {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.login-form {
+  margin-top: 20px;
+}
+
+.join-container {
+  text-align: center;
+}
+
+.signup-section {
+  text-align: center;
+}
+
+.sub-header {
+  font-size: 1.7em;
+  text-align: center;
+  font-family: 'Fredoka One', cursive;
+}
+
+#title {
+  font-family: 'Fredoka One', cursive;
+}
+
 fieldset {
   width: 50%;
 }
