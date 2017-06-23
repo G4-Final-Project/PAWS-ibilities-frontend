@@ -16,12 +16,12 @@ module.exports = function(config) {
       'test/**/*-test.js',
     ],
     plugins: [
-    'karma-mocha',
-    'karma-webpack',
-    'karma-coverage',
-    'mocha',
-    'karma-mocha-reporter',
-    'karma-chrome-launcher',
+      'karma-mocha',
+      'karma-webpack',
+      'karma-coverage',
+      'mocha',
+      'karma-mocha-reporter',
+      'karma-chrome-launcher',
     ],
     exclude: [
     ],
