@@ -2,6 +2,7 @@
 
 // require('./scss/reset.scss');
 require('./scss/main.scss');
+require('angular-material/angular-material.scss');
 
 
 const path = require('path');
