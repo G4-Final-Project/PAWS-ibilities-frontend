@@ -10,6 +10,8 @@ const camelcase = require('camelcase');
 const pascalcase = require('pascalcase');
 require('@uirouter/angularjs');
 require('angular-material');
+require('angulr-aria');
+require('angular-material-icons');
 
 const paws = angular.module('paws', ['ui.router', 'ngMaterial']);
 
