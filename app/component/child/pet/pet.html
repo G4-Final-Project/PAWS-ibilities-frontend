@@ -1,14 +1,13 @@
 <md-list-item>
-<div>
-  <h1>Pets</h1>
-  <p>Name: {{ petCtrl.pet.name }}</p>
-  <p>Born on: {{ petCtrl.pet.created }}</p>
-  <p>ID: {{ petCtrl.pet._id }}</p>
-  <p>Total Walks: {{ petCtrl.pet.totalWalks }}</p>
-  <p>Current Hunger: {{ petCtrl.pet.currentHunger }}</p>
-  <p>Bath: {{ petCtrl.pet.hygiene }}</p>
-  <p>Play: {{ petCtrl.pet.happiness }}</p>
-
-
-</div>
+  <md-card>
+    <div>
+      <md-card-title>Name: {{ petCtrl.pet.name }}</md-card-title>
+      <md-card-content>
+        <p>Born on: {{ petCtrl.pet.created }}</p>
+        <p>ID: {{ petCtrl.pet._id }}</p>
+        <p>Total Walks: {{ petCtrl.pet.totalWalks }}</p>
+        <p>Current Hunger: {{ petCtrl.pet.currentHunger }}</p>
+      </md-card-content>
+    </div>
+  </md-card>
 </md-list-item>
