@@ -9,7 +9,7 @@
     "build": "webpack",
     "test": "karma start --auto-watch",
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p --progress"
+    "heroku-postbuild": "webpack --progress"
   },
   "repository": {
     "type": "git",
