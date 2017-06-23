@@ -28,7 +28,7 @@ module.exports = [
         $log.log('child created');
         let child = res.data;
         service.children.unshift(child);
-        console.log('this is the child array', service.children);
+        // console.log('this is the child array', service.children);
         return child;
       })
       .catch(err => {
@@ -49,7 +49,6 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-
         return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child`, config);
       })
       .then(res => {

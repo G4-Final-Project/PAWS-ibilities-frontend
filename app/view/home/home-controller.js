@@ -26,7 +26,6 @@ module.exports = [
       this.fetchChild = () => {
         return childService.fetchChild()
         .then(child => {
-          console.log('fetchChild');
           this.child = child;
           this.currentChild = this.child[0];
         })
@@ -36,6 +35,7 @@ module.exports = [
       this.fetchPets = () => {
         return petService.fetchAllPets()
         .then(pet => {
+
           console.log( 'this is the pet', pet);
           this.pet = pet;
           this.currentPet = this.pet[0];
@@ -48,12 +48,7 @@ module.exports = [
         .catch(err => $log.error(err));
       };
 
-      // this.test = () => {
-      //   return petService.fetchAllPets()
-      //   .then(res => {
-      //     console.log('this is the res', res);
-      //   });
-      // };
+
       this.fetchAll = () => {
         this.fetchChild();
         this.fetchPets();

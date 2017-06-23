@@ -23,7 +23,7 @@ module.exports = [
         })
         .then(petState => {
           petService.updatePet(child, petState);
-          console.log('pet has been updated');
+          // console.log('pet has been updated');
         });
       };
 
