@@ -85,6 +85,7 @@ module.exports = [
     };
 
     service.fetchAllPets = () => {
+      
       return authService.getToken()
       .then(token => {
         let config = {

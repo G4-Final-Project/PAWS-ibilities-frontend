@@ -49,7 +49,6 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-
         return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child`, config);
       })
       .then(res => {
