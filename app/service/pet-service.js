@@ -89,6 +89,7 @@ module.exports = [
     service.fetchAllPets = () => {
       return authService.getToken()
       .then(token => {
+        console.log('this is the token', token);
         let config = {
           headers: {
             Accept: 'application/json',
@@ -101,6 +102,7 @@ module.exports = [
       })
       .then(res => {
         service.pets = res.data;
+        console.log('service dot pets', service.pets);
         return res.data;
       })
       .catch(err => {
