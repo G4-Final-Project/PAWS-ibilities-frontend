@@ -1,5 +1,5 @@
 <section class="signup">
-  <md-card class="landing">
+  <md-card class="card">
 
   <form class="signup-form"
     ng-submit="signupCtrl.signup(signupCtrl.user)"
@@ -30,7 +30,7 @@
 
     <md-input-container>
     <input class="input-std"
-      type="text"
+      type="password"
       placeholder="password"
       ng-minlength="3"
       ng-model="signupCtrl.user.password"
