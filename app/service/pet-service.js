@@ -22,7 +22,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.post(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, pet, config);
+        return $http.post(`http://localhost:3000/api/child/${child}/pet`, pet, config);
       })
       .then(res => {
         console.log('pet-service:',res.data);
@@ -49,7 +49,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child.id}/pet`, pet, config);
+        return $http.get(`http://localhost:3000/api/child/${child.id}/pet`, pet, config);
       })
       .then(res => {
         let pet = res.data;
@@ -72,7 +72,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, config);
+        return $http.get(`http://localhost:3000/api/child/${child}/pet`, config);
       })
       .then(res => {
         service.pets = res.data;
@@ -85,7 +85,7 @@ module.exports = [
     };
 
     service.fetchAllPets = () => {
-      
+
       return authService.getToken()
       .then(token => {
         console.log('this is the token', token);
@@ -96,7 +96,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.get('https://paw-sibilities-backend.herokuapp.com/api/pet', config);
+        return $http.get('http://localhost:3000/api/pet', config);
       })
       .then(res => {
         service.pets = res.data;
@@ -118,7 +118,7 @@ module.exports = [
           'Content-Type': 'application/json',
         },
       };
-      return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child/${child}/pet`, config)
+      return $http.get(`http://localhost:3000/api/child/${child}/pet`, config)
       .then(res => {
         let pet = res.data;
         // console.log('res.data', res.data);
@@ -141,7 +141,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.put(`https://paw-sibilities-backend.herokuapp.com/api/child/${childId}/pet`, pet, config);
+        return $http.put(`http://localhost:3000/api/child/${childId}/pet`, pet, config);
       })
       .then(res => {
         let pet = res.data;

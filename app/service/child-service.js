@@ -22,7 +22,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.post(`https://paw-sibilities-backend.herokuapp.com/api/child`, child, config);
+        return $http.post(`http://localhost:3000/api/child`, child, config);
       })
       .then(res => {
         $log.log('child created');
@@ -49,7 +49,7 @@ module.exports = [
             Authorization: `Bearer ${token}`,
           },
         };
-        return $http.get(`https://paw-sibilities-backend.herokuapp.com/api/child`, config);
+        return $http.get(`http://localhost:3000/api/child`, config);
       })
       .then(res => {
         service.children = res.data;
@@ -93,7 +93,7 @@ module.exports = [
 
       return authService.getToken()
       .then(token => {
-        let url = `https://paw-sibilities-backend.herokuapp.com/api/child/${childId}`;
+        let url = `http://localhost:3000/api/child/${childId}`;
         let config = {
           headers: {
             Accept: 'application/json',

@@ -21,6 +21,17 @@ p {
   text-align: center;
 }
 
+.pet-card {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.pet-info {
+  font-size: 1em;
+  font-family: 'Fredoka One', cursive;
+
+}
+
 .care {
   text-align: center;
 }
@@ -28,6 +39,10 @@ p {
 .md-display-3 {
   font-family: 'Fredoka One', cursive;
   text-align: center;
+}
+
+#maria {
+  width: 300px;
 }
 
 .md-display {

@@ -2,12 +2,14 @@
     <div>
       <md-card-title>Name: {{ petCtrl.pet.name }}</md-card-title>
       <md-card-content>
+        <div class="pet-info">
         <p>Born on: {{ petCtrl.pet.created }}</p>
         <p>ID: {{ petCtrl.pet._id }}</p>
         <p>Total Walks: {{ petCtrl.pet.totalWalks }}</p>
         <p>Times Fed: {{ petCtrl.pet.currentHunger }}</p>
         <p>Play: {{ petCtrl.pet.happiness }}</p>
         <p>Baths: {{ petCtrl.pet.hygiene }}</p>
+      </div>
 
       </md-card-content>
     </div>
